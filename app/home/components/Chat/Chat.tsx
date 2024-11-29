@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
-import { TMessage } from "@/actions/getMessages";
-import { verifyAndExecuteLLMPublic, submitPrompt } from "@/actions";
 import { useAccount } from "wagmi";
 import { waitForTransactionReceipt, writeContract } from "@wagmi/core";
 import { config } from "@/app/wagmi";
@@ -11,7 +9,12 @@ import { ConversationModal } from "./ConversationModal";
 import { createPortal } from "react-dom";
 import { AvaPayment__factory } from "@/typechain-types/factories/AvaPayment__factory";
 import { Switch } from "@headlessui/react";
-import { getSessionWithPrice } from "@/actions/getSessionWithPrice";
+import {
+  TMessage,
+  verifyAndExecuteLLMPublic,
+  submitPrompt,
+  getSessionWithPrice
+} from "@/actions";
 import { sha256 } from "viem";
 
 type TProps = {

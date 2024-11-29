@@ -1,4 +1,4 @@
-import { getMessageByTxHash } from "@/actions/getMessageByTxHash";
+import { getMessageByTxHash } from "@/actions";
 import { isTxValidEthereum } from "./ethereum";
 
 export const isTxValid = async (

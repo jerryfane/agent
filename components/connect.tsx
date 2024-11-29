@@ -1,5 +1,5 @@
 "use client";
-import { getSolanaBalance } from "@/actions/solana";
+import { getSolanaBalance } from "@/actions";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";

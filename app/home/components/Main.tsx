@@ -1,7 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { NumberTickerDemo, TypingAnimationDemo } from "@/components/animations";
-import { getRecentMessages, TMessage } from "@/actions/getMessages";
 import { Header } from "@/app/home/components/Header";
 import { Chat } from "@/app/home/components/Chat/Chat";
 import { useState, useCallback, useEffect } from "react";
@@ -9,8 +8,13 @@ import { ConversationModal } from "./Chat/ConversationModal";
 import { useAccount } from "wagmi";
 import { HowItWorks } from "./Chat/HowItWorks";
 import { Stats } from "./Chat/Stats";
-import { getGameState, TGameState } from "@/actions/getGameState";
-import { getPrizePool } from "@/actions/getPrizePool";
+import {
+  getRecentMessages,
+  TMessage,
+  getGameState,
+  TGameState,
+  getPrizePool
+} from "@/actions";
 import Image from "next/image";
 
 type TProps = {
